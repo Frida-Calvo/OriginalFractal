@@ -38,10 +38,10 @@ public void fractal(int a, int b, int c)
 	}
 	else {
 		//recursion case
-		fractal(a+c/2, b+c/2, c/2);
-		fractal(a-c/2,b-c/2,c/2);
-		fractal(a+c/2,a-c/2,c/2);
-		fractal(a-c/2,a+c/2,c/2);
+		fractal(a+(int)(c/2), (int)(b+c/2), (int)(c/2));
+		fractal(a-(int)(c/2),b-(int)(c/2),(int)(c/2));
+		fractal(a+(int)(c/2),a-(int)(c/2),(int)(c/2));
+		fractal(a-(int)(c/2),a+(int)(c/2),(int)(c/2));
 		c-=1;
 		fractal(a,b,c);
 

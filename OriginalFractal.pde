@@ -6,6 +6,7 @@ public void setup()
 	size(600,600);
 	background(169, 209, 214);
 	fill(219, 178, 232);
+	rectMode(CENTER);
 }
 
 public void draw()
@@ -13,14 +14,26 @@ public void draw()
 	 // fractal(300,300,100);
 
 	 fractal(300,300,200);
+
+	 fractal(80,80,85);
+	 fractal(600-80,600-80,85);
+
+	 fractal(600-80,80,100);
+	 fractal(80,600-80,100);
+
+	 
+	
+
+
 	 // f(50,50,200);
+	 // flower(200,100,5);
 }
 
 public void fractal(int a, int b, int c)
 {
 	if(c <= 50){
 		//base case
-		rectMode(CENTER);
+		
 		rect(a, b, c, c);
 	}
 	else {
@@ -35,10 +48,20 @@ public void fractal(int a, int b, int c)
 	}
 }
 
+// public void flower(int x, int y, int z){
+// 	if(z <= 10){
+// 		ellipse(x-z/2,y-z,z/3,z/3);
+// 		ellipse(x, y, z*2,z*2);
+// 	}
 
-// public void f(int x, int y, int z)
-// {
-// 	if(z<=10){
+// 	else{
+// 		fractal(x,y,z/6);
+// 	}
+// }
+
+
+
+	// if(z<=10){
 // 		ellipseMode(CENTER);
 // 		ellipse(x, y, z, z);
 // 	}
@@ -50,35 +73,3 @@ public void fractal(int a, int b, int c)
 public void mousePressed() {
 	fill(255,(int)(Math.random()*60)+100,(int)(Math.random()*40)+150);
 }
-
-
-
-// public String regularPaperFold(int numFolds) {
-//   if(numFolds == 1)
-//     return "1";
-//   else {
-//     String s = regularPaperFold(numFolds-1);
-//     return s + "1" + onesComplement(reverse(s))  ;
-//   }
-  
-// }
-  
-  
-//   public String reverse(String sWord){
-//   String here = "";
-//   for(int i = sWord.length()-1; i >= 0; i--)
-//     here = here + sWord.substring(i,i+1);
-//   return here;
-//   }
-  
-  
-//   public String onesComplement(String s){
-//   String yee = "";
-//   for(int n =0; n<s.length(); n++){
-//     if(s.substring(n,n+1).equals("1"))
-//       yee = yee + 0;
-//     if(s.substring(n,n+1).equals("0"))
-//       yee = yee + 1;
-//   }
-//   return yee;
-//   }
